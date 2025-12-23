@@ -1,0 +1,210 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #121f39;
+  padding: 24px;
+}
+
+.layout {
+  .layout__header {
+    h1 {
+      margin: 0 0 20px;
+      font-size: 1.6rem;
+      text-align: center;
+      color: #5ae358;
+    }
+  }
+
+  /* GRID DEMO */
+  .grid-demo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 cột bằng nhau */
+    grid-template-rows: 150px 150px; /* 2 hàng */
+    gap: 16px;
+
+    .grid-item {
+      background: #2563eb;
+      color: white;
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+
+      &:nth-child(2n) {
+        background: #9333ea;
+      }
+    }
+  }
+}
+
+.ex1-page {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .page__header {
+    h1 {
+      margin: 0 0 16px;
+      text-align: center;
+      color: #5ae358;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 120px);
+    gap: 12px;
+
+    .cell {
+      background: #2563eb;
+      color: white;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+
+      &:nth-child(2n) {
+        background: #9333ea;
+      }
+    }
+  }
+}
+
+.ex2-page {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  .page__header {
+    text-align: center;
+    margin-bottom: 16px;
+
+    h1 {
+      margin: 0 0 6px;
+      color: #5ae358;
+    }
+
+    p {
+      margin: 0;
+      color: #94a3b8;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 200px 1fr 2fr;
+    gap: 12px;
+
+    .card {
+      background: #2563eb;
+      border-radius: 12px;
+      padding: 16px;
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+
+      &:nth-child(2n) {
+        background: #9333ea;
+      }
+    }
+  }
+}
+
+.ex3-page {
+  max-width: 900px;
+  margin: 0 auto;
+
+  .page__header {
+    h1 {
+      margin: 0 0 16px;
+      text-align: center;
+      color: #5ae358;
+    }
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 16px;
+    justify-content: center; /* để 3 cột cố định nằm giữa nếu màn rộng */
+
+    .photo {
+      margin: 0;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.1);
+
+      img {
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+        display: block;
+      }
+
+      figcaption {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+        color: #374151;
+      }
+    }
+  }
+}
+
+.ex4-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page__header {
+  h1 {
+    margin: 0 0 16px;
+    text-align: center;
+    color: #5ae358;
+  }
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  .post {
+    border: 1px solid #e2e8f0;
+    background: white;
+    border-radius: 12px;
+    padding: 14px 16px;
+
+    .post__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+
+      h2 {
+        margin: 0;
+        font-size: 1.05rem;
+      }
+
+      time {
+        font-size: 0.85rem;
+        color: #64748b;
+      }
+    }
+
+    p {
+      margin: 10px 0 0;
+      color: #334155;
+      line-height: 1.4;
+    }
+  }
+}

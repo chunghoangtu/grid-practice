@@ -1,14 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid - Day 1</title>
+    <link rel="stylesheet" href="./day1.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header class="layout__header">
+        <h1>Grid Day 1 – Basic Layout</h1>
+      </header>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="./day1.css" />
-</head>
+      <section class="grid-demo" aria-label="Demo lưới 3 cột">
+        <article class="grid-item">1</article>
+        <article class="grid-item">2</article>
+        <article class="grid-item">3</article>
+        <article class="grid-item">4</article>
+        <article class="grid-item">5</article>
+        <article class="grid-item">6</article>
+      </section>
+    </main>
 
-<body>
-</body>
+    <!-- Ex 1: Grid 4 column + 3 row -->
+    <main class="ex1-page">
+      <header class="page__header">
+        <h1>Bài 1 – Grid 4 cột, 3 hàng</h1>
+      </header>
 
+      <section class="grid" aria-label="Lưới 12 ô">
+        <article class="cell">1</article>
+        <article class="cell">2</article>
+        <article class="cell">3</article>
+        <article class="cell">4</article>
+        <article class="cell">5</article>
+        <article class="cell">6</article>
+        <article class="cell">7</article>
+        <article class="cell">8</article>
+        <article class="cell">9</article>
+        <article class="cell">10</article>
+        <article class="cell">11</article>
+        <article class="cell">12</article>
+      </section>
+    </main>
+
+    <!-- Ex 2: Grid 3 column 200px - 1 fr - 2 fr, row auto -->
+    <main class="ex2-page">
+      <header class="page__header">
+        <h1>Bài 2 – Mix px và fr</h1>
+        <p>Cột 1 cố định 200px, cột 2 = 1 phần, cột 3 = 2 phần.</p>
+      </header>
+
+      <section class="grid" aria-label="Grid 3 cột mix px và fr">
+        <article class="card">Item 1</article>
+        <article class="card">Item 2</article>
+        <article class="card">Item 3</article>
+        <article class="card">Item 4</article>
+        <article class="card">Item 5</article>
+        <article class="card">Item 6</article>
+      </section>
+    </main>
+
+    <!-- Ex 3: Gallery Grid (figure + img + figcaption) -->
+    <!-- 3 columns: 200px 200px 200px  -->
+    <!-- 2 row auto -->
+    <main class="ex3-page">
+      <header class="page__header">
+        <h1>Bài 3 – Gallery 3 cột cố định</h1>
+      </header>
+
+      <section class="gallery" aria-label="Gallery ảnh">
+        <figure class="photo">
+          <img
+            src="https://www.w3schools.com/html/pic_trulli.jpg"
+            alt="Ảnh 1"
+          />
+          <figcaption>Ảnh 1</figcaption>
+        </figure>
+
+        <figure class="photo">
+          <img
+            src="https://www.w3schools.com/html/pic_trulli.jpg"
+            alt="Ảnh 2"
+          />
+          <figcaption>Ảnh 2</figcaption>
+        </figure>
+
+        <figure class="photo">
+          <img
+            src="https://www.w3schools.com/html/pic_trulli.jpg"
+            alt="Ảnh 3"
+          />
+          <figcaption>Ảnh 3</figcaption>
+        </figure>
+
+        <figure class="photo">
+          <img
+            src="https://www.w3schools.com/html/pic_trulli.jpg"
+            alt="Ảnh 4"
+          />
+          <figcaption>Ảnh 4</figcaption>
+        </figure>
+
+        <figure class="photo">
+          <img
+            src="https://www.w3schools.com/html/pic_trulli.jpg"
+            alt="Ảnh 5"
+          />
+          <figcaption>Ảnh 5</figcaption>
+        </figure>
+
+        <figure class="photo">
+          <img
+            src="https://www.w3schools.com/html/pic_trulli.jpg"
+            alt="Ảnh 6"
+          />
+          <figcaption>Ảnh 6</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <!-- Ex 4: Layout danh sách bài viết-->
+    <main class="ex4-page">
+      <header class="page__header">
+        <h1>Bài 4 – Danh sách bài viết (3 cột)</h1>
+      </header>
+
+      <section class="posts" aria-label="Danh sách bài viết">
+        <article class="post">
+          <header class="post__header">
+            <h2>CSS Grid căn bản</h2>
+            <time datetime="2025-12-22">22/12/2025</time>
+          </header>
+          <p>Khởi tạo grid, tạo cột/hàng và dùng gap để giãn cách.</p>
+        </article>
+
+        <article class="post">
+          <header class="post__header">
+            <h2>Đơn vị fr là gì?</h2>
+            <time datetime="2025-12-22">22/12/2025</time>
+          </header>
+          <p>fr là đơn vị chia phần không gian trống còn lại trong grid.</p>
+        </article>
+
+        <article class="post">
+          <header class="post__header">
+            <h2>repeat() viết gọn</h2>
+            <time datetime="2025-12-22">22/12/2025</time>
+          </header>
+          <p>repeat() giúp code gọn, dễ thay đổi số cột/hàng.</p>
+        </article>
+
+        <article class="post">
+          <header class="post__header">
+            <h2>Grid vs Flexbox</h2>
+            <time datetime="2025-12-22">22/12/2025</time>
+          </header>
+          <p>Grid tối ưu layout 2D, Flexbox tối ưu layout 1D.</p>
+        </article>
+
+        <article class="post">
+          <header class="post__header">
+            <h2>Gap, row-gap, column-gap</h2>
+            <time datetime="2025-12-22">22/12/2025</time>
+          </header>
+          <p>gap là khoảng cách giữa items, dễ hơn margin trong layout.</p>
+        </article>
+
+        <article class="post">
+          <header class="post__header">
+            <h2>Auto rows</h2>
+            <time datetime="2025-12-22">22/12/2025</time>
+          </header>
+          <p>Auto rows giúp chiều cao hàng tự theo nội dung.</p>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
