@@ -163,48 +163,48 @@ body {
 .ex4-page {
   max-width: 1100px;
   margin: 0 auto;
-}
 
-.page__header {
-  h1 {
-    margin: 0 0 16px;
-    text-align: center;
-    color: #5ae358;
-  }
-}
-
-.posts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-
-  .post {
-    border: 1px solid #e2e8f0;
-    background: white;
-    border-radius: 12px;
-    padding: 14px 16px;
-
-    .post__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 10px;
-
-      h2 {
-        margin: 0;
-        font-size: 1.05rem;
-      }
-
-      time {
-        font-size: 0.85rem;
-        color: #64748b;
-      }
+  .page__header {
+    h1 {
+      margin: 0 0 16px;
+      text-align: center;
+      color: #5ae358;
     }
+  }
 
-    p {
-      margin: 10px 0 0;
-      color: #334155;
-      line-height: 1.4;
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    .post {
+      border: 1px solid #e2e8f0;
+      background: white;
+      border-radius: 12px;
+      padding: 14px 16px;
+
+      .post__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 10px;
+
+        h2 {
+          margin: 0;
+          font-size: 1.05rem;
+        }
+
+        time {
+          font-size: 0.85rem;
+          color: #64748b;
+        }
+      }
+
+      p {
+        margin: 10px 0 0;
+        color: #334155;
+        line-height: 1.4;
+      }
     }
   }
 }

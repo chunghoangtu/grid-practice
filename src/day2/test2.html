@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid - Day 1</title>
+    <link rel="stylesheet" href="./day2.css" />
+  </head>
+  <body>
+    <main class="page">
+      <!-- 1 Demo repeat() -->
+      <section class="demo-repeat">
+        <article class="box">1</article>
+        <article class="box">2</article>
+        <article class="box">3</article>
+        <article class="box">4</article>
+      </section>
+
+      <!-- 2 Demo minmax() -->
+      <section class="demo-minmax">
+        <article class="box">1</article>
+        <article class="box">2</article>
+      </section>
+      <section class="demo-minmax">
+        <article class="box">1</article>
+        <article class="box">2</article>
+      </section>
+
+      <!-- Combine repeat and minmax -->
+      <section class="demo-repeat-minmax">
+        <article class="box">1</article>
+        <article class="box">2</article>
+        <article class="box">3</article>
+        <article class="box">4</article>
+      </section>
+
+      <!-- 3 Demo auto-fit and auto-fill -->
+      <h1>Auto-fill</h1>
+      <section class="demo-auto-fill">
+        <article class="box">1</article>
+        <article class="box">2</article>
+        <article class="box">3</article>
+        <article class="box">4</article>
+      </section>
+      <h1>Auto-fit</h1>
+      <section class="demo-auto-fit">
+        <article class="box">1</article>
+        <article class="box">2</article>
+        <article class="box">3</article>
+      </section>
+
+      <!-- 4 Demo pattern grid responsive chuẩn -->
+      <!-- 
+      📱 Mobile → 1 cột
+      💻 Tablet → 2 cột
+      🖥 Desktop → 3–4 cột
+      → Không cần media query -->
+      <h1>Common responsive pattern using Grid</h1>
+      <section class="demo-cards" aria-label="Danh sách card">
+        <article class="box">Card 1</article>
+        <article class="box">Card 2</article>
+        <article class="box">Card 3</article>
+        <article class="box">Card 4</article>
+        <article class="box">Card 5</article>
+      </section>
+    </main>
+
+    <main class="ex-page">
+      <h3>Bài 1 – Responsive Card Grid</h3>
+      <section class="ex1-cards">
+        <article class="card">1 Card</article>
+        <article class="card">2 Card</article>
+        <article class="card">3 Card</article>
+        <article class="card">4 Card</article>
+        <article class="card">5 Card</article>
+        <article class="card">6 Card</article>
+        <article class="card">7 Card</article>
+        <article class="card">8 Card</article>
+      </section>
+
+      <h3>Bài 2 – Gallery ảnh responsive</h3>
+      <section class="ex2-gallery">
+        <figure class="photo">
+          <img src="https://picsum.photos/seed/1/600/400" alt="Ảnh 1" />
+          <figcaption>Ảnh 1</figcaption>
+        </figure>
+
+        <figure class="photo">
+          <img src="https://picsum.photos/seed/2/600/400" alt="Ảnh 2" />
+          <figcaption>Ảnh 2</figcaption>
+        </figure>
+
+        <figure class="photo">
+          <img src="https://picsum.photos/seed/3/600/400" alt="Ảnh 3" />
+          <figcaption>Ảnh 3</figcaption>
+        </figure>
+
+        <figure class="photo">
+          <img src="https://picsum.photos/seed/4/600/400" alt="Ảnh 4" />
+          <figcaption>Ảnh 4</figcaption>
+        </figure>
+
+        <figure class="photo">
+          <img src="https://picsum.photos/seed/5/600/400" alt="Ảnh 5" />
+          <figcaption>Ảnh 5</figcaption>
+        </figure>
+
+        <figure class="photo">
+          <img src="https://picsum.photos/seed/6/600/400" alt="Ảnh 6" />
+          <figcaption>Ảnh 6</figcaption>
+        </figure>
+      </section>
+
+      <h3>Bài 3 – So sánh auto-fit vs auto-fill</h3>
+      <section class="ex3-autofill">
+        <article class="box">Auto-fill Item 1</article>
+        <article class="box">Auto-fill Item 2</article>
+        <article class="box">Auto-fill Item 3</article>
+      </section>
+      <section class="ex3-autofit">
+        <article class="box">Auto-fit Item 1</article>
+        <article class="box">Auto-fit Item 2</article>
+        <article class="box">Auto-fit Item 3</article>
+      </section>
+
+      <h3>Bài 4 – Blog cards</h3>
+      <section class="ex4-posts">
+        <article class="post">
+          <header class="post__header">
+            <h2>Grid responsive “không cần media query”</h2>
+            <time datetime="2025-12-25">25/12/2025</time>
+          </header>
+          <p>
+            Dùng repeat(auto-fit, minmax()) để số cột tự tăng/giảm theo không
+            gian trống.
+          </p>
+        </article>
+
+        <article class="post">
+          <header class="post__header">
+            <h2>minmax() giúp card không bị quá nhỏ</h2>
+            <time datetime="2025-12-24">24/12/2025</time>
+          </header>
+          <p>
+            Khi màn hình hẹp, cột sẽ xuống hàng thay vì bóp card nhỏ xíu. Đây là
+            điểm khiến Grid cực mạnh cho layout dạng cards/gallery.
+          </p>
+        </article>
+
+        <article class="post">
+          <header class="post__header">
+            <h2>auto-fit vs auto-fill</h2>
+            <time datetime="2025-12-23">23/12/2025</time>
+          </header>
+          <p>auto-fit sẽ kéo dãn item để lấp đầy hàng khi thiếu item.</p>
+        </article>
+
+        <article class="post">
+          <header class="post__header">
+            <h2>repeat() viết gọn</h2>
+            <time datetime="2025-12-22">22/12/2025</time>
+          </header>
+          <p>
+            repeat() giúp bạn thay đổi số cột/hàng cực nhanh. Rất hợp khi
+            refactor layout.
+          </p>
+        </article>
+
+        <article class="post">
+          <header class="post__header">
+            <h2>Card dài hơn để test</h2>
+            <time datetime="2025-12-21">21/12/2025</time>
+          </header>
+          <p>
+            Đây là đoạn text dài hơn một chút để card cao hơn. Mục tiêu là quan
+            sát việc auto-flow của Grid khi item có chiều cao khác nhau. Bạn sẽ
+            thấy grid vẫn chia cột đều và xuống hàng theo quy tắc bình thường.
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
