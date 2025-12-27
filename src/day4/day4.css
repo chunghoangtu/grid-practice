@@ -1,0 +1,237 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #121f39;
+  padding: 24px;
+
+  h1,
+  h3 {
+    color: #5ae358;
+    /* background: #2563eb;
+    background: #9333ea; */
+  }
+}
+
+.page {
+  display: none;
+
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 120px);
+    gap: 12px;
+
+    grid-template-areas:
+      "header header header"
+      "sidebar article1 article1"
+      "sidebar article2 article2"
+      "sidebar article2 article2"
+      "footer footer footer";
+
+    > * {
+      color: white;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .header {
+      grid-area: header;
+      background: #0ea5e9;
+    }
+    .sidebar {
+      grid-area: sidebar;
+      background: #2563eb;
+    }
+    .article1 {
+      grid-area: article1;
+      background: #9333ea;
+    }
+    .article2 {
+      grid-area: article2;
+      background: #16a34a;
+    }
+    .footer {
+      grid-area: footer;
+      background: #f59e0b;
+    }
+  }
+}
+
+.ex1-page {
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 120px);
+    gap: 12px;
+
+    grid-template-areas:
+      "header header"
+      "sidebar article"
+      "footer footer";
+
+    > * {
+      color: white;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .header {
+      grid-area: header;
+      background: #0ea5e9;
+    }
+    .sidebar {
+      grid-area: sidebar;
+      background: #2563eb;
+    }
+    .article {
+      grid-area: article;
+      background: #16a34a;
+    }
+    .footer {
+      grid-area: footer;
+      background: #f59e0b;
+    }
+  }
+}
+
+.ex2-page {
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 120px);
+    gap: 12px;
+
+    grid-template-areas:
+      "header header header"
+      ". article ."
+      ". article ."
+      ". article ."
+      "footer footer footer";
+
+    > * {
+      color: white;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .header {
+      grid-area: header;
+      background: #0ea5e9;
+    }
+    .article {
+      grid-area: article;
+      background: #16a34a;
+    }
+    .footer {
+      grid-area: footer;
+      background: #f59e0b;
+    }
+  }
+}
+
+.ex3-page {
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 120px);
+    gap: 12px;
+
+    grid-template-areas:
+      "header header header header"
+      "sidebar article article article"
+      "sidebar article article article"
+      "sidebar article article article"
+      "footer footer footer footer";
+
+    > * {
+      color: white;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .header {
+      grid-area: header;
+      background: #0ea5e9;
+    }
+    .sidebar {
+      grid-area: sidebar;
+      background: #2563eb;
+    }
+    .article {
+      grid-area: article;
+      background: #16a34a;
+    }
+    .footer {
+      grid-area: footer;
+      background: #f59e0b;
+    }
+  }
+}
+
+.ex4-page {
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 120px);
+    gap: 12px;
+
+    grid-template-areas:
+      "header header"
+      "sidebar article"
+      "footer footer ";
+
+    > * {
+      color: white;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .header {
+      grid-area: header;
+      background: #0ea5e9;
+    }
+    .sidebar {
+      grid-area: sidebar;
+      background: #2563eb;
+    }
+    .article {
+      grid-area: article;
+      background: #16a34a;
+    }
+    .footer {
+      grid-area: footer;
+      background: #f59e0b;
+    }
+
+    @media (width < 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 120px);
+      grid-template-areas:
+        "header"
+        "sidebar"
+        "article"
+        "footer";
+    }
+  }
+}
