@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid - Day 6</title>
+    <link rel="stylesheet" href="./day6.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h3>Grid with Explicit</h3>
+      <section class="layout">
+        <article class="card">1</article>
+        <article class="card">2</article>
+        <article class="card">3</article>
+        <article class="card">4</article>
+        <article class="card">5</article>
+        <article class="card">6</article>
+        <article class="card">7</article>
+        <article class="card">8</article>
+      </section>
+      <h3>Grid with Implicit with auto-rows</h3>
+      <section class="layout implicit-rows">
+        <article class="card">1</article>
+        <article class="card">2</article>
+        <article class="card">3</article>
+        <article class="card">4</article>
+        <article class="card">5</article>
+        <article class="card">6</article>
+        <article class="card">7</article>
+        <article class="card">8</article>
+      </section>
+      <h3>Grid with Implicit with auto-columns</h3>
+      <section class="layout implicit-columns">
+        <article class="card">1</article>
+        <article class="card">2</article>
+        <article class="card">3</article>
+        <article class="card">4</article>
+        <article class="card">5</article>
+        <article class="card">6</article>
+        <article class="card">7</article>
+        <article class="card">8</article>
+        <article class="card">9</article>
+      </section>
+      <h3>Grid with Implicit with auto-rows with/without dense</h3>
+      <section class="layout implicit-rows dense">
+        <article class="card big">1</article>
+        <article class="card big">2</article>
+        <article class="card">with dense</article>
+        <article class="card">4</article>
+        <article class="card">5</article>
+        <article class="card">6</article>
+        <article class="card">7</article>
+        <article class="card">8</article>
+      </section>
+      <section class="layout implicit-rows">
+        <article class="card big">1</article>
+        <article class="card big">2</article>
+        <article class="card">without dense</article>
+        <article class="card">4</article>
+        <article class="card">5</article>
+        <article class="card">6</article>
+        <article class="card">7</article>
+        <article class="card">8</article>
+      </section>
+    </main>
+
+    <main class="ex1-page">
+      <h3>Bài 1: Grid nhiều item (implicit rows)</h3>
+      <section class="layout" aria-label="Grid 4 cột 14 item">
+        <article class="card">1</article>
+        <article class="card">2</article>
+        <article class="card">3</article>
+        <article class="card">4</article>
+        <article class="card">5</article>
+        <article class="card">6</article>
+        <article class="card">7</article>
+        <article class="card">8</article>
+        <article class="card">9</article>
+        <article class="card">10</article>
+        <article class="card">11</article>
+        <article class="card">12</article>
+        <article class="card">13</article>
+        <article class="card">14</article>
+      </section>
+    </main>
+
+    <main class="ex2-page">
+      <h3>Bài 2: Column flow (implicit columns)</h3>
+      <section class="layout" aria-label="Grid 3 hàng 10 item">
+        <article class="card">1</article>
+        <article class="card">2</article>
+        <article class="card">3</article>
+        <article class="card">4</article>
+        <article class="card">5</article>
+        <article class="card">6</article>
+        <article class="card">7</article>
+        <article class="card">8</article>
+        <article class="card">9</article>
+        <article class="card">10</article>
+      </section>
+    </main>
+
+    <main class="ex3-page">
+      <h3>Bài 3 – Dense vs non-dense</h3>
+      <section class="layout dense" aria-label="Grid 3 cột 8 item">
+        <article class="card big">1</article>
+        <article class="card big">2</article>
+        <article class="card">dense</article>
+        <article class="card">4</article>
+        <article class="card">5</article>
+        <article class="card">6</article>
+        <article class="card">7</article>
+        <article class="card">8</article>
+      </section>
+      <section class="layout" aria-label="Grid 3 cột 8 item">
+        <article class="card big">1</article>
+        <article class="card big">2</article>
+        <article class="card">non-dense</article>
+        <article class="card">4</article>
+        <article class="card">5</article>
+        <article class="card">6</article>
+        <article class="card">7</article>
+        <article class="card">8</article>
+      </section>
+    </main>
+
+    <main class="ex4-page">
+      <h3>Bài 4 – Gallery fake masonry</h3>
+      <section class="layout" aria-label="Grid 4 cột 14 item">
+        <article class="card">1</article>
+        <article class="card">2</article>
+        <article class="card big">3</article>
+        <article class="card">4</article>
+        <article class="card">5</article>
+        <article class="card">6</article>
+        <article class="card">7</article>
+        <article class="card big">8</article>
+        <article class="card">9</article>
+        <article class="card">10</article>
+        <article class="card">11</article>
+        <article class="card big"">12</article>
+        <article class="card">13</article>
+        <article class="card">14</article>
+      </section>
+    </main>
+  </body>
+</html>

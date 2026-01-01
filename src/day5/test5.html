@@ -71,9 +71,18 @@
     <main class="ex4-page">
       <!--  Bài 4 – Dashboard headert -->
       <h3>Grid with items and content position</h3>
-      <header class="header">
-        <div class="logo">logo</div>
-        <h3 class="text">text</h3>
+      <header class="dash-header" aria-label="Dashboard header">
+        <div class="logo" aria-hidden="true">LG</div>
+
+        <div class="brand">
+          <h1 class="brand__title">My Dashboard</h1>
+          <p class="brand__sub">Grid alignment demo</p>
+        </div>
+
+        <nav class="actions" aria-label="Actions">
+          <button class="btn" type="button">Search</button>
+          <button class="btn" type="button">Profile</button>
+        </nav>
       </header>
     </main>
   </body>

@@ -175,33 +175,57 @@ body {
 }
 
 .ex4-page {
-  .header {
+  .dash-header {
+    height: 80px;
+    border-radius: 14px;
+    background: #111827;
+    border: 1px solid #334155;
+    padding: 0 16px;
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 80px;
+    grid-template-columns: 56px 1fr auto;
+    gap: 12px;
 
-    border: 2px solid rgb(133, 217, 69);
-
-    justify-items: start;
+    /* ✅ căn theo dọc giữa */
     align-items: center;
 
-    > * {
-      border-radius: 12px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-    }
+    /* ✅ ngang trái là mặc định (start) */
+    justify-items: start;
+  }
 
-    .logo {
-      color: white;
-      background: rgb(33, 129, 224);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 60px;
-      aspect-ratio: 1;
-      border-radius: 50%;
-    }
+  .logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: #2563eb;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+  }
+
+  .brand__title {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  .brand__sub {
+    margin: 2px 0 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+  }
+
+  .actions {
+    display: grid; /* dùng grid cho cụm nút */
+    grid-auto-flow: column; /* xếp ngang */
+    gap: 10px;
+    justify-items: end;
+  }
+
+  .btn {
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: #e5e7eb;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-weight: 700;
   }
 }
-
-
