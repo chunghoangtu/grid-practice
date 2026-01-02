@@ -1,0 +1,396 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #121f39;
+  padding: 24px;
+
+  h1,
+  h3 {
+    color: #5ae358;
+    /* background: #2563eb;
+    background: #9333ea; */
+  }
+}
+
+.page {
+  display: grid;
+  gap: 12px;
+  display: none;
+
+  .layout {
+    border: 2px solid rgb(133, 217, 69);
+    padding: 16px;
+    min-height: 252px;
+
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    > * {
+      color: white;
+      border-radius: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .card {
+      border: 2px solid #ce5e13;
+      padding: 16px;
+      background: #2563eb;
+      color: white;
+      border-radius: 12px;
+      place-items: center;
+      font-weight: 900;
+
+      display: grid;
+      grid-template-rows: auto auto auto;
+
+      &.big {
+        grid-column: span 2;
+      }
+
+      button {
+        width: 100px;
+        font-size: 1rem;
+        line-height: 1;
+        padding: 8px;
+        background: rgba(117, 238, 36, 0.651);
+        color: white;
+        font-weight: 700;
+      }
+    }
+
+    &.subgrid {
+      .card {
+        grid-template-rows: subgrid;
+        grid-row: span 3; /* rất quan trọng */
+      }
+    }
+  }
+}
+
+.page2 {
+  display: none;
+  margin-top: 16px;
+  .products {
+    border: 2px solid rgb(133, 217, 69);
+    padding: 16px;
+    min-height: 252px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+
+    /* 3 hàng chung cho mọi card */
+    grid-template-rows: auto auto auto;
+  }
+
+  .product {
+    display: grid;
+
+    /* ✅ kế thừa hàng từ parent */
+    grid-template-rows: subgrid;
+
+    /* ⚠️ bắt buộc span đủ số hàng */
+    grid-row: span 3;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+    color: white;
+    border-radius: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+
+  .product__title {
+    margin: 0;
+  }
+  .product__price {
+    margin: 8px 0;
+    font-weight: 700;
+  }
+}
+
+.ex1-page {
+  display: grid;
+  gap: 12px;
+
+  .layout {
+    border: 2px solid rgb(133, 217, 69);
+    padding: 16px;
+    min-height: 252px;
+
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    > * {
+      color: white;
+      border-radius: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .card {
+      border: 2px solid #ce5e13;
+      padding: 16px;
+      background: #2563eb;
+      color: white;
+      border-radius: 12px;
+      place-items: center;
+      font-weight: 900;
+
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 3;
+
+      button {
+        width: 100px;
+        font-size: 1rem;
+        line-height: 1;
+        padding: 8px;
+        background: rgba(117, 238, 36, 0.651);
+        color: white;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.ex2-page {
+  display: grid;
+  gap: 12px;
+
+  .layout {
+    border: 2px solid rgb(133, 217, 69);
+    padding: 16px;
+    min-height: 252px;
+
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    > * {
+      color: white;
+      border-radius: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .card {
+      border: 2px solid #ce5e13;
+      padding: 16px;
+      background: #2563eb;
+      color: white;
+      border-radius: 12px;
+      place-items: center;
+      font-weight: 900;
+
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 4;
+
+      button {
+        width: 100px;
+        font-size: 1rem;
+        line-height: 1;
+        padding: 8px;
+        background: rgba(117, 238, 36, 0.651);
+        color: white;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.ex3-page {
+  display: grid;
+  gap: 12px;
+
+  .layout {
+    border: 2px solid rgb(133, 217, 69);
+    padding: 16px;
+    min-height: 252px;
+
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    > * {
+      color: white;
+      border-radius: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .card {
+      border: 2px solid #ce5e13;
+      padding: 16px;
+      background: #2563eb;
+      color: white;
+      border-radius: 12px;
+      place-items: center;
+      font-weight: 900;
+
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 4;
+      grid-template-columns: 140px 1fr;
+
+      .title {
+        text-align: start;
+        grid-column: span 2;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: subgrid;
+
+        /* ✅ đảm bảo row span hết 2 cột của parent */
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
+
+.ex3-page-demo {
+  max-width: 1000px;
+  margin: 0 auto;
+  .page__header {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .page__header h1 {
+    margin: 0;
+  }
+
+  .specs {
+    display: grid;
+    gap: 16px;
+  }
+
+  /* Parent grid tạo 2 cột CHUNG cho label/value */
+  .spec {
+    display: grid;
+    gap: 10px;
+
+    /* ✅ 2 cột chuẩn: label cố định, value flexible */
+    grid-template-columns: 140px 1fr;
+
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  .spec__title {
+    margin: 0 0 6px;
+  }
+
+  /* Mỗi row là grid con dùng subgrid theo cột */
+  .row {
+    display: grid;
+    grid-template-columns: subgrid;
+
+    /* ✅ đảm bảo row span hết 2 cột của parent */
+    grid-column: 1 / -1;
+
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #f1f5f9;
+  }
+
+  .label {
+    font-weight: 800;
+    color: #334155;
+  }
+  .value {
+    color: #0f172a;
+  }
+}
+
+.ex4-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  .page__header {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .page__header h1 {
+    margin: 0;
+  }
+  .page__header p {
+    margin: 6px 0 0;
+    color: #94a3b8;
+  }
+
+  /* Parent */
+  .cards {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+
+    /* 3 hàng chung */
+    grid-template-rows: auto auto auto;
+  }
+
+  /* Child default (subgrid version) */
+  .card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+
+    background: #3064d6;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  .card__title {
+    margin: 0;
+    line-height: 1.2;
+  }
+  .card__price {
+    margin: 10px 0;
+    font-weight: 900;
+    color: #60a5fa;
+  }
+
+  .card__btn {
+    justify-self: start;
+    border: 1px solid #334155;
+    background: #0b1220;
+    color: #e5e7eb;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-weight: 900;
+  }
+
+  /* ✅ Fallback: nếu không support subgrid */
+  @supports not (grid-template-rows: subgrid) {
+    .card {
+      /* tự định nghĩa layout bên trong card */
+      grid-template-rows: auto auto 1fr auto;
+      /* title, price, spacer, button */
+    }
+
+    /* Khi fallback, parent "rows chung" không còn tác dụng để align perfect,
+     nhưng spacer giúp nút vẫn xuống đáy card => nhìn vẫn chuyên nghiệp. */
+  }
+
+  @media (max-width: 900px) {
+    .cards {
+      grid-template-columns: 1fr;
+    }
+  }
+}

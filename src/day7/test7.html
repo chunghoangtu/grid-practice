@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid - Day 7</title>
+    <link rel="stylesheet" href="./day7.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h3>Grid without subgrid</h3>
+      <section class="layout">
+        <article class="card">
+          <h2>Product A</h2>
+          <p class="price">$10</p>
+          <button>Buy</button>
+        </article>
+
+        <article class="card">
+          <h2>Very long product name here</h2>
+          <p class="price">$12</p>
+          <button>Buy</button>
+        </article>
+
+        <article class="card">
+          <h2>Very long product</h2>
+          <p class="price">$12</p>
+          <button>Buy</button>
+        </article>
+
+        <article class="card">
+          <h2>Very long</h2>
+          <p class="price">$12</p>
+          <button>Buy</button>
+        </article>
+
+        <article class="card">
+          <h2>here</h2>
+          <p class="price">$12</p>
+          <button>Buy</button>
+        </article>
+      </section>
+      <h3>Grid with subgrid</h3>
+      <section class="layout subgrid">
+        <article class="card">
+          <h2>Product A</h2>
+          <p class="price">$10</p>
+          <button>Buy</button>
+        </article>
+
+        <article class="card">
+          <h2>Very long product name here</h2>
+          <p class="price">$12</p>
+          <button>Buy</button>
+        </article>
+
+        <article class="card">
+          <h2>Very long product</h2>
+          <p class="price">$12</p>
+          <button>Buy</button>
+        </article>
+
+        <article class="card">
+          <h2>Very long</h2>
+          <p class="price">$12</p>
+          <button>Buy</button>
+        </article>
+
+        <article class="card">
+          <h2>here</h2>
+          <p class="price">$12</p>
+          <button>Buy</button>
+        </article>
+      </section>
+    </main>
+
+    <main class="page2">
+      <section class="products" aria-label="Product list">
+        <article class="product">
+          <h2 class="product__title">Product A</h2>
+          <p class="product__price">$10</p>
+          <button class="product__btn">Buy</button>
+        </article>
+
+        <article class="product">
+          <h2 class="product__title">Very long product name here</h2>
+          <p class="product__price">$12</p>
+          <button class="product__btn">Buy</button>
+        </article>
+      </section>
+    </main>
+
+    <main class="ex1-page">
+      <h3>Bài 1 – Card list với title lệch</h3>
+      <section class="layout">
+        <article class="card">
+          <h2>Product A</h2>
+          <p class="price">$10</p>
+          <button>Buy</button>
+        </article>
+
+        <article class="card">
+          <h2>Very long product name here here here!</h2>
+          <p class="price">$12</p>
+          <button>Buy</button>
+        </article>
+
+        <article class="card">
+          <h2>Very long product</h2>
+          <p class="price">$12</p>
+          <button>Buy</button>
+        </article>
+      </section>
+    </main>
+
+    <main class="ex2-page">
+      <h3>Bài 2 – Pricing table</h3>
+      <section class="layout">
+        <article class="card">
+          <h2>Basic</h2>
+          <ul class="plan__features">
+            <li>Unlimited projects</li>
+          </ul>
+          <p class="price">$10</p>
+          <button>Buy</button>
+        </article>
+        <article class="card">
+          <h2>Pro</h2>
+          <ul class="plan__features">
+            <li>Unlimited projects</li>
+            <li>Priority email support</li>
+          </ul>
+          <p class="price">$10</p>
+          <button>Buy</button>
+        </article>
+        <article class="card">
+          <h2>Enterprise</h2>
+          <ul class="plan__features">
+            <li>Unlimited projects</li>
+            <li>Priority email support</li>
+            <li>Team sharing</li>
+            <li>Export reports</li>
+          </ul>
+          <p class="price">$10</p>
+          <button>Buy</button>
+        </article>
+      </section>
+    </main>
+
+    <main class="ex3-page">
+      <h3>Bài 3 – Subgrid theo cột (label thẳng cột)</h3>
+      <section class="layout" aria-label="Specs list">
+        <article class="card">
+          <h2 class="title">Laptop A</h2>
+
+          <div class="row">
+            <span class="label">CPU</span>
+            <span class="value">i7-1360P</span>
+          </div>
+          <div class="row">
+            <span class="label">RAM</span>
+            <span class="value">16GB</span>
+          </div>
+          <div class="row">
+            <span class="label">Storage</span>
+            <span class="value">512GB SSD</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title">Laptop B (long name)</h2>
+
+          <div class="row">
+            <span class="label">CPU</span>
+            <span class="value">Ryzen 7 7840U</span>
+          </div>
+          <div class="row">
+            <span class="label">RAM</span>
+            <span class="value">32GB</span>
+          </div>
+          <div class="row">
+            <span class="label">Storage</span>
+            <span class="value">1TB SSD + External</span>
+          </div>
+        </article>
+      </section>
+    </main>
+    <main class="ex3-page-demo">
+      <header class="page__header">
+        <h1>Bài 3 – Subgrid theo cột (label thẳng cột)</h1>
+      </header>
+
+      <section class="specs" aria-label="Specs list">
+        <article class="spec">
+          <h2 class="spec__title">Laptop A</h2>
+
+          <div class="row">
+            <span class="label">CPU</span>
+            <span class="value">i7-1360P</span>
+          </div>
+          <div class="row">
+            <span class="label">RAM</span>
+            <span class="value">16GB</span>
+          </div>
+          <div class="row">
+            <span class="label">Storage</span>
+            <span class="value">512GB SSD</span>
+          </div>
+        </article>
+
+        <article class="spec">
+          <h2 class="spec__title">Laptop B (long name)</h2>
+
+          <div class="row">
+            <span class="label">CPU</span>
+            <span class="value">Ryzen 7 7840U</span>
+          </div>
+          <div class="row">
+            <span class="label">RAM</span>
+            <span class="value">32GB</span>
+          </div>
+          <div class="row">
+            <span class="label">Storage</span>
+            <span class="value">1TB SSD + External</span>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <main class="ex4-page">
+    <header class="page__header">
+      <h1>Bài 4 – Subgrid + Fallback</h1>
+      <p>Nếu browser không hỗ trợ subgrid, layout vẫn ổn.</p>
+    </header>
+
+    <section class="cards" aria-label="Cards with fallback">
+      <article class="card">
+        <h2 class="card__title">Short title</h2>
+        <p class="card__price">$10</p>
+        <button class="card__btn" type="button">Buy</button>
+      </article>
+
+      <article class="card">
+        <h2 class="card__title">A very very long title that wraps and wraps</h2>
+        <p class="card__price">$12</p>
+        <button class="card__btn" type="button">Buy</button>
+      </article>
+
+      <article class="card">
+        <h2 class="card__title">Medium title</h2>
+        <p class="card__price">$9</p>
+        <button class="card__btn" type="button">Buy</button>
+      </article>
+    </section>
+  </main>
+  </body>
+</html>
