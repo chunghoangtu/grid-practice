@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid - Day 8</title>
+    <link rel="stylesheet" href="./day8.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h3>Grid without Overlap & Layer Layout</h3>
+      <figure class="hero" aria-label="Hero banner">
+        <img src="https://picsum.photos/1200/600" alt="" class="hero__img" />
+
+        <figcaption class="hero__content">
+          <h1>Build with CSS Grid</h1>
+          <p>Clean layout without absolute positioning</p>
+        </figcaption>
+      </figure>
+
+      <figure class="hero self-adjust" aria-label="Hero banner">
+        <img src="https://picsum.photos/1200/1200" alt="" class="hero__img" />
+
+        <figcaption class="hero__content">
+          <h1>Build with CSS Grid</h1>
+          <p>Clean layout without absolute positioning</p>
+        </figcaption>
+      </figure>
+
+      <!-- Multi-layer Grid (background → mask → content) -->
+      <section class="banner">
+        <img src="https://picsum.photos/1200/600" class="bg" />
+        <div class="mask"></div>
+        <div class="content">this is a content</div>
+      </section>
+
+      <!-- Card cover + overlay action -->
+      <article class="cover-card">
+        <img src="https://picsum.photos/1200/1200" alt="" />
+        <div class="content">
+          <h2>Mountain Trip</h2>
+          <button>Explore</button>
+        </div>
+      </article>
+    </main>
+
+    <main class="ex1-page">
+      <header class="page__header">
+        <h1>Bài 1 – Hero Banner</h1>
+      </header>
+
+      <figure class="hero" aria-label="Hero banner">
+        <img
+          class="hero__img"
+          src="https://picsum.photos/1400/800?random=101"
+          alt="Landscape"
+        />
+        <figcaption class="hero__content">
+          <h2 class="hero__title">Build UI with CSS Grid</h2>
+          <p class="hero__desc">Overlay cleanly without absolute positioning</p>
+          <a class="hero__cta" href="#" role="button">Get started</a>
+        </figcaption>
+      </figure>
+    </main>
+
+    <main class="ex2-page">
+      <header class="page__header">
+        <h1>Bài 2 – Card cover overlay bottom</h1>
+      </header>
+
+      <section class="grid" aria-label="Card grid">
+        <article class="cover-card">
+          <img
+            class="cover-card__img"
+            src="https://picsum.photos/800/600?random=202"
+            alt="Mountain"
+          />
+          <div class="cover-card__content">
+            <h2 class="cover-card__title">Mountain Trip</h2>
+            <p class="cover-card__meta">3 days · from $129</p>
+            <button class="cover-card__btn" type="button">Explore</button>
+          </div>
+        </article>
+
+        <article class="cover-card">
+          <img
+            class="cover-card__img"
+            src="https://picsum.photos/800/600?random=203"
+            alt="City"
+          />
+          <div class="cover-card__content">
+            <h2 class="cover-card__title">Night City</h2>
+            <p class="cover-card__meta">2 nights · from $99</p>
+            <button class="cover-card__btn" type="button">Explore</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <main class="ex3-page">
+      <header class="page__header">
+        <h1>Bài 3 – Multi-layer (image + dark mask + content)</h1>
+      </header>
+
+      <section class="banner" aria-label="Multi-layer banner">
+        <img
+          class="banner__img"
+          src="https://picsum.photos/1400/800?random=303"
+          alt="Sea"
+        />
+        <div class="banner__mask" aria-hidden="true"></div>
+
+        <div class="banner__content">
+          <h2>Summer Sale</h2>
+          <p>Up to 50% off · Limited time</p>
+          <div class="banner__actions" aria-label="Actions">
+            <a class="btn" href="#" role="button">Shop now</a>
+            <a class="btn btn--ghost" href="#" role="button">Learn more</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <main class="ex4-page">
+      <header class="page__header">
+        <h1>Bài 4 – Hover overlay (Grid)</h1>
+        <p>Hover hoặc tab vào button để overlay hiện (focus-within).</p>
+      </header>
+
+      <section class="grid" aria-label="Hover cards">
+        <article class="action-card">
+          <img
+            class="action-card__img"
+            src="https://picsum.photos/800/600?random=401"
+            alt="Forest"
+          />
+          <div class="action-card__mask" aria-hidden="true"></div>
+          <div class="action-card__overlay">
+            <h2 class="action-card__title">Forest Walk</h2>
+            <button class="action-card__btn" type="button">View</button>
+          </div>
+        </article>
+
+        <article class="action-card">
+          <img
+            class="action-card__img"
+            src="https://picsum.photos/800/600?random=402"
+            alt="Desert"
+          />
+          <div class="action-card__mask" aria-hidden="true"></div>
+          <div class="action-card__overlay">
+            <h2 class="action-card__title">Desert Ride</h2>
+            <button class="action-card__btn" type="button">View</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
