@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid - Day 9</title>
+    <link rel="stylesheet" href="./day9.css" />
+  </head>
+  <body>
+    <!-- Dashboard Layout -->
+    <div class="layout" style="display: none">
+      <header class="header">Header</header>
+      <aside class="sidebar">Sidebar</aside>
+      <main class="main">
+        <section class="content">
+          <article class="card">Card 1</article>
+          <article class="card">Card 2</article>
+          <article class="card">Card 3</article>
+          <article class="card">Card 4</article>
+        </section>
+      </main>
+      <footer class="footer">Footer</footer>
+    </div>
+
+    <!-- Bài 1 – Admin layout 
+    (Header 64px, Sidebar 240px, Main scroll độc lập, Footer 48px) -->
+    <div class="ex1-layout" style="display: none">
+      <header class="header" aria-label="Top bar">
+        <div class="brand">Admin</div>
+        <nav class="header__nav" aria-label="Top navigation">
+          <a href="#">Docs</a>
+          <a href="#">Team</a>
+          <a href="#">Profile</a>
+        </nav>
+      </header>
+
+      <aside class="sidebar" aria-label="Sidebar">
+        <nav class="side-nav" aria-label="Sidebar navigation">
+          <a class="side-nav__item" href="#">Dashboard</a>
+          <a class="side-nav__item" href="#">Users</a>
+          <a class="side-nav__item" href="#">Settings</a>
+          <a class="side-nav__item" href="#">Billing</a>
+        </nav>
+      </aside>
+
+      <main class="main" aria-label="Main content">
+        <section class="main__inner" aria-label="Content area">
+          <h1>Overview</h1>
+          <p>
+            Main sẽ scroll độc lập. Bạn có thể kéo để thấy header/footer không
+            bị “đẩy”.
+          </p>
+
+          <!-- tạo content dài để test scroll -->
+          <section class="cards" aria-label="Cards">
+            <article class="card">Card 1</article>
+            <article class="card">Card 2</article>
+            <article class="card">Card 3</article>
+            <article class="card">Card 4</article>
+            <article class="card">Card 5</article>
+            <article class="card">Card 6</article>
+            <article class="card">Card 7</article>
+            <article class="card">Card 8</article>
+            <article class="card">Card 9</article>
+            <article class="card">Card 10</article>
+            <article class="card">Card 11</article>
+            <article class="card">Card 12</article>
+          </section>
+        </section>
+      </main>
+
+      <footer class="footer" aria-label="Footer">
+        <small>© 2026 My Admin</small>
+      </footer>
+    </div>
+
+    <!-- Bài 2 – Responsive dashboard 
+    (Desktop sidebar trái, Mobile sidebar dưới header) -->
+    <div class="ex2-layout" style="display: none">
+      <header class="header">Header</header>
+      <aside class="sidebar">
+        <nav class="side-nav" aria-label="Sidebar">
+          <a href="#">Dashboard</a>
+          <a href="#">Reports</a>
+          <a href="#">Settings</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <section class="main__inner">
+          <h1>Responsive layout</h1>
+          <p>Resize màn hình xuống nhỏ để sidebar chuyển xuống dưới header.</p>
+          <div class="dummy"></div>
+        </section>
+      </main>
+
+      <footer class="footer">Footer</footer>
+    </div>
+
+    <!-- Bài 3 – Content grid trong main (auto-fill, min 220px) -->
+    <div class="ex3-layout" style="display: none">
+      <header class="header">Header</header>
+      <aside class="sidebar">Sidebar</aside>
+
+      <main class="main">
+        <section class="content" aria-label="Dashboard cards">
+          <article class="card">A</article>
+          <article class="card">B</article>
+          <article class="card">C</article>
+          <article class="card">D</article>
+          <article class="card">E</article>
+          <article class="card">F</article>
+          <article class="card">G</article>
+          <article class="card">H</article>
+        </section>
+      </main>
+
+      <footer class="footer">Footer</footer>
+    </div>
+
+    <!-- Bài 4 – Collapsible sidebar (CSS-only) -->
+    <!-- ✅ Checkbox điều khiển trạng thái (CSS-only) -->
+    <div class="ex4-layout">
+      <input class="toggle" type="checkbox" id="sidebarToggle" />
+
+      <div class="layout">
+        <header class="header">
+          <label class="toggle-btn" for="sidebarToggle">☰ Toggle</label>
+          <div class="brand">Admin</div>
+          <div></div>
+        </header>
+
+        <aside class="sidebar" aria-label="Sidebar">
+          <nav class="side-nav">
+            <a href="#"
+              ><span class="icon">🏠</span
+              ><span class="text">Dashboard</span></a
+            >
+            <a href="#"
+              ><span class="icon">📊</span><span class="text">Reports</span></a
+            >
+            <a href="#"
+              ><span class="icon">⚙️</span><span class="text">Settings</span></a
+            >
+          </nav>
+        </aside>
+
+        <main class="main">
+          <section class="main__inner">
+            <h1>Collapsible sidebar</h1>
+            <p>Bật/tắt sidebar bằng CSS-only. Khi collapsed, chỉ còn icon.</p>
+            <div class="dummy"></div>
+          </section>
+        </main>
+
+        <footer class="footer">Footer</footer>
+      </div>
+    </div>
+  </body>
+</html>
